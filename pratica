@@ -1,1 +1,15 @@
-atividade pratica
+public class ExemploNumeros{
+    public static void main (String[]args){
+        byte idade = 25;
+        short estoque = 32000;
+        int populacao = 214000000;
+        
+        long estrelasNaGalaxia = 100_000_000_000L;
+        float precodoLeite = 5,49f
+        double pi = 3,141592653589793
+
+        para somas em valor não use float/double devido a erros de arredondamento
+        use a classe BigDecimal
+        java.math.BigDecimal saldoBancario = new java.math.BigDecimal ("1500.75")
+    }
+}
