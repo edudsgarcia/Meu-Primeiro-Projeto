@@ -1,6 +1,33 @@
-package primeiroprograma;
-public class PrimeiroPrograma {
-public static void main(String[] args){
-Systen.out.print ( "Olá, Mundo!");
-   }
-}
+public class ExemploNumeros {
+    public static void main(String[] args) {
+        
+        // --- INTEIROS ---
+        byte idade = 25;              // Pequeno (8-bit)
+        short estoque = 32000;       // Médio (16-bit)
+        int populacao = 214000000;    // Padrão (32-bit)
+        
+        // O sufixo 'L' é obrigatório para literais long que excedem o range do int
+        long estrelasNaGalaxia = 100_000_000_000L; 
+        // Dica: O '_' serve apenas para facilitar a leitura humana.
+
+        // --- PONTO FLUTUANTE (DECIMAIS) ---
+        // O sufixo 'f' é obrigatório, pois o padrão para decimais é double
+        float precoLeite = 5.49f;     
+        
+        // Double é o tipo ideal para cálculos científicos ou comuns
+        double pi = 3.141592653589793; 
+
+        // --- EXTREMA PRECISÃO (Financeiro) ---
+        // Para dinheiro, nunca use float/double devido a erros de arredondamento. 
+        // Use a classe BigDecimal.
+        java.math.BigDecimal saldoBancario = new java.math.BigDecimal("1500.75");
+
+        // --- EXEMPLO DE CASTING (CONVERSÃO) ---
+        double valorDouble = 9.99;
+        int valorInteiro = (int) valorDouble; // Casting explícito: remove a parte decimal
+
+        // --- SAÍDA DE DADOS ---
+        System.out.println("Long: " + estrelasNaGalaxia);
+        System.out.println("Float: " + precoLeite);
+        System.out.println("Double convertido para Int: " + valorInteiro); // Resultado: 9
+        System.out.println("Saldo BigDecimal: " + saldoBancario);pu
