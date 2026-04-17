@@ -1,34 +1,41 @@
-packageTreino.de.tipos.primitivos
-public class ExemploNumeros {
-    public static void main(String[] args) {
-        
-        // --- INTEIROS ---
-        byte idade = 25;              // Pequeno (8-bit)
-        short estoque = 32000;       // Médio (16-bit)
-        int populacao = 214000000;    // Padrão (32-bit)
-        
-        // O sufixo 'L' é obrigatório para literais long que excedem o range do int
-        long estrelasNaGalaxia = 100_000_000_000L; 
-        // Dica: O '_' serve apenas para facilitar a leitura humana.
+packegeCalculadoraSimples.java
+import java.util.Scanner;
+public class CalculadoraSimples{
+public static void main (String[] args) {
+    Scanner leitor = new Scanner(Syten.in);
+    System.out.println("---Calculadora Simples---");
+    System.out.println("Digite o primeiro número: ");
+    double num1 = leitor.nextDouble();
 
-        // --- PONTO FLUTUANTE (DECIMAIS) ---
-        // O sufixo 'f' é obrigatório, pois o padrão para decimais é double
-        float precoLeite = 5.49f;     
-        
-        // Double é o tipo ideal para cálculos científicos ou comuns
-        double pi = 3.141592653589793; 
+    System.out.print("Digite a operação(+,-,*,/): ");
+    char operação = leitor.next().charAt(0);
 
-        // --- EXTREMA PRECISÃO (Financeiro) ---
-        // Para dinheiro, nunca use float/double devido a erros de arredondamento. 
-        // Use a classe BigDecimal.
-        java.math.BigDecimal saldoBancario = new java.math.BigDecimal("1500.75");
+    System.out.println('Digite o segundo número');
+    double num2 = leitor.nextDouble;
 
-        // --- EXEMPLO DE CASTING (CONVERSÃO) ---
-        double valorDouble = 9.99;
-        int valorInteiro = (int) valorDouble; // Casting explícito: remove a parte decimal
+    double resultado = 0
 
-        // --- SAÍDA DE DADOS ---
-        System.out.println("Long: " + estrelasNaGalaxia);
-        System.out.println("Float: " + precoLeite);
-        System.out.println("Double convertido para Int: " + valorInteiro); // Resultado: 9
-        System.out.println("Saldo BigDecimal: " + saldoBancario);pu
+    //Estrutura de decisão das operações
+    switch (operação) {
+        case '+': resultado = num1 + num2; break;
+        case '-': resultado = num1 + num2: break;
+        case '*': resultado = num1 * num2: break;
+        case '/':
+            if (num2 !=0){
+                resultado = num1 / num2;
+            } else {
+            System.out.println("Erro: Divisão por zero!");
+            return;
+
+            }
+            break;
+            default
+            System.out.printl("Operação inválida")
+            return;
+
+            }
+    }
+System.out.println("Resultado: " + resultado);
+leitor.close();
+}
+}
